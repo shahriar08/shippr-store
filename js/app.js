@@ -19,8 +19,8 @@ const showProducts = (products) => {
         <p class="fs-6 fw-bold"><i class="fas fa-star rating"></i> ${product.rating.rate}/5 <i class="fas fa-user rating ms-3"></i> ${product.rating.count} rating</p>     
         <h3>Price: $ ${product.price}</h3>
         <div class="cart_footer mx-auto">
-          <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="py-2 buy-now btn btn-success ms-2 text-white">Add to cart</button>
-          <button id="details-btn" class="py-2 btn btn-danger ms-5">Details</button>
+          <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="py-2 buy-now btn btn-primary ms-2 text-white">Add to cart</button>
+          <button id="details-btn" class="py-2 btn btn-success ms-5 ">Details</button>
         </div>
       </div>
     </div>`;
