@@ -60,6 +60,10 @@ body {
 .cart-main {
   padding-right: 30px;
 }
+.rating{
+  color: rgb(255, 179, 0);
+}
+
 @media only screen and (max-width: 768px) {
   #all-products {
     display: grid;
