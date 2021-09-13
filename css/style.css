@@ -2,6 +2,9 @@ body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
+.header{
+  background-color: #edf5fa;
+}
 .search-field {
   border: none;
   border-radius: 50px;
@@ -13,7 +16,7 @@ body {
   border: none;
 }
 .search-box {
-  border: 1px solid rgb(3, 118, 211);
+  border: 1px solid rgb(189, 220, 245);
   width: 281px;
   border-radius: 5px;
   margin: auto;
@@ -28,7 +31,6 @@ body {
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* border: 1px solid black; */
   text-align: center;
   width: 100%;
   margin: auto;
@@ -36,29 +38,41 @@ body {
   justify-content: center;
 }
 .single-product {
-  padding: 10px;
+  position: relative;
+  width: 85%;
+  height: 550px;
+  margin-top: 10px;
+  padding: 15px;
   transition: 0.6s;
+  border-radius: 10px;
+  background-color: #edf5fa;
 }
 .single-product:hover {
-  box-shadow: 4px 4px 7px gray;
+  box-shadow: 4px 4px 7px rgb(153, 151, 151);
   border-radius: 10px;
-  border: 1px solid cyan;
+  border: 1px solid rgb(155, 157, 197);
 }
 .product-image {
   width: 150px;
-  height: 150px;
+  height: 200px;
 }
 .cart {
   width: 350px;
-  /* border: 1px solid green; */
   padding: 10px;
   box-shadow: 10px 10px 20px gray;
   border-radius: 5px;
   margin-right: 30px;
   position: fixed;
+  background-color: #edf5fa;
 }
 .cart-main {
   padding-right: 30px;
+}
+.cart_footer{
+  position: absolute;
+  top: 88%;
+  left: 15%;
+  bottom: 0;
 }
 .rating{
   color: rgb(255, 179, 0);
@@ -71,7 +85,6 @@ body {
   }
   .cart {
     width: 300px;
-    /* border: 1px solid green; */
     padding: 10px;
     box-shadow: 10px 10px 20px gray;
     border-radius: 5px;

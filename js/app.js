@@ -3,7 +3,6 @@ const loadProducts = () => {
   showProducts(data);
 };
 
-
 // show all product in UI 
 const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
@@ -11,17 +10,20 @@ const showProducts = (products) => {
     const image = product.images;
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product">
-      <div>
-    <img class="product-image" src=${product.image}></img>
+    div.innerHTML = `
+    <div class="single-product ms-5 mb-3">
+      <img class="product-image w-50" src=${product.image}></img>
+      <div class="card-body">
+        <h4>${product.title}</h4>
+        <p>Category: ${product.category}</p>   
+        <p class="fs-6 fw-bold"><i class="fas fa-star rating"></i> ${product.rating.rate}/5 <i class="fas fa-user rating ms-3"></i> ${product.rating.count} rating</p>     
+        <h3>Price: $ ${product.price}</h3>
+        <div class="cart_footer mx-auto">
+          <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="py-2 buy-now btn btn-success ms-2 text-white">Add to cart</button>
+          <button id="details-btn" class="py-2 btn btn-danger ms-5">Details</button>
+        </div>
       </div>
-      <h4>${product.title}</h4>
-      <p>Category: ${product.category}</p>   
-      <p  class="fs-6 fw-bold"><i class="fas fa-star rating"></i> ${product.rating.rate}/5 (${product.rating.count} rating)</p>     
-      <h2>Price: $ ${product.price}</h2>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
-      `;
+    </div>`;
     document.getElementById("all-products").appendChild(div);
   }
 };
@@ -34,6 +36,7 @@ const addToCart = (id, price) => {
   
 };
 
+// getInputValue function 
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
   const converted = parseFloat(element);
